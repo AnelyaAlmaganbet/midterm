@@ -1,0 +1,147 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f0f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  #container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  h1 {
+    color: #e88cae;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in forwards;
+  }
+  
+  #calculator {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    animation: slideUp 1s ease-in-out forwards;
+  }
+  
+  input {
+    grid-column: span 4;
+    padding: 20px;
+    border: none;
+    background-color: #f3eef5;
+    font-size: 2rem;
+    border-radius: 15px;
+    text-align: right;
+    color: #555;
+  }
+  
+  button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  button[data-action="clear"],
+  button[data-action="calculate"] {
+    background-color: #e88cae;
+  }
+  
+  button[data-action="backspace"] {
+    background-color: #f7a6b3;
+  }
+  
+  button[data-action="percentage"] {
+    background-color: #f7c8d7;
+  }
+  
+  button[data-action="operator"] {
+    background-color: #e4a3b4;
+  }
+  
+  button[data-action="clear-history"],
+  button[data-action="sqrt"],
+  button[data-action="square"],
+  button[data-action="pi"] {
+    background-color: #be90a0;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+    background-color: #e6e6e6;
+  }
+  
+  button:not([data-action]) {
+    background-color: #f3eef5;
+    color: #555;
+  }
+  
+  #history {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 80vh;
+  }
+  
+  #history h2 {
+    color: #e88cae;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  #history ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #history li {
+    background-color: #f3eef5;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #555;
+  }
+  
+  /* Анимации */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
