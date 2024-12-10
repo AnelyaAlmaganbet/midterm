@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator by Anelya</title>
+  <link rel="stylesheet" href="cher.css">
+</head>
+<body>
+  <div id="container">
+    <div>
+      <h1>Calculator</h1>
+      <div id="calculator">
+        <input type="text" id="result" disabled>
+
+        <button data-action="clear">c</button>
+        <button data-action="backspace">←</button>
+        <button data-action="percentage">%</button>
+        <button data-action="clear-history">h</button>
+
+        <button data-action="pi">π</button>
+        <button data-action="sqrt">√x</button>
+        <button data-action="square">x²</button>
+        <button data-action="operator" value="/">÷</button>
+
+        <button value="7">7</button>
+        <button value="8">8</button>
+        <button value="9">9</button>
+        <button data-action="operator" value="*">×</button>
+
+        <button value="4">4</button>
+        <button value="5">5</button>
+        <button value="6">6</button>
+        <button data-action="operator" value="-">−</button>
+
+        <button value="1">1</button>
+        <button value="2">2</button>
+        <button value="3">3</button>
+        <button data-action="operator" value="+">+</button>
+
+        <button value="0" style="grid-column: span 2;">0</button>
+        <button value=".">.</button>
+        <button data-action="calculate">=</button>
+      </div>
+    </div>
+    <div id="history">
+      <h1>History</h1>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+  <script src="cher.js"></script>
+</body>
+</html>
